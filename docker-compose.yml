@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  webservice:
+    image: php:8-apache-buster
+    restart: always
+    ports:
+    - 8000:80
+    volumes:
+    - ./pages:/var/www/html
+    container_name: server-php-apache
